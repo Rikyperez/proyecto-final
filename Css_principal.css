@@ -1,0 +1,152 @@
+/* Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1c3f5a 0%, #2a8a3f 100%); /* Gradiente azul y verde oscuros */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Texto blanco para mejor contraste */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Zona de búsqueda fija en la parte superior */
+#searchContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1c3f5a; /* Azul oscuro */
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff; /* Fondo blanco para el input */
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #28a745; /* Verde */
+    outline: none;
+}
+
+button.search-btn {
+    padding: 12px 20px;
+    background-color: #007bff; /* Azul */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button.search-btn:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilo de Estrellas */
+.star-image img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 5px;
+}
+
+.star-image img:hover {
+    transform: scale(1.3);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4); /* Verde */
+}
+
+/* Comentarios */
+.comments-container {
+    margin-top: 120px; /* Espacio para la zona de búsqueda fija */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(40, 167, 69, 0.8); /* Verde oscuro con opacidad */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.comment {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment-stars img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.comment-text {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Mensajes de No Resultados */
+#noResults {
+    color: #28a745; /* Verde */
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+/* Cuadros de Restaurantes */
+.restaurant-card {
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.05); /* Animación de inchado */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    #searchContainer {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .restaurant-card {
+        width: 100%;
+    }
+}

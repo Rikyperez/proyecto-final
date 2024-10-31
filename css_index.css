@@ -1,0 +1,323 @@
+/* --- Fondo Degradado con Animación --- */
+body {
+    background: linear-gradient(135deg, #dcdcdc, #8b5a2b);
+    /* Degradado de gris claro a marrón rústico */
+    background-size: 200% 200%;
+    /* Tamaño del fondo para animación */
+    animation: gradientAnimation 5s ease infinite;
+    /* Animación del fondo */
+}
+
+/* --- Animación del Fondo --- */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    /* Posición inicial */
+    50% {
+        background-position: 100% 50%;
+    }
+
+    /* Posición intermedia */
+    100% {
+        background-position: 0% 50%;
+    }
+
+    /* Posición final */
+}
+
+/* --- Barra de Búsqueda Fija en la Parte Superior --- */
+#searchContainer {
+    position: fixed;
+    /* Fija la barra en la parte superior */
+    top: 0;
+    /* Colocada en la parte superior */
+    width: 100%;
+    /* Ocupa el 100% del ancho */
+    background-color: #f5f5f5;
+    /* Fondo blanco suave */
+    padding: 20px;
+    /* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    display: flex;
+    /* Usar flexbox para alinear elementos */
+    justify-content: center;
+    /* Centrar elementos horizontalmente */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+/* --- Campo de Búsqueda --- */
+input[type="text"] {
+    width: 40%;
+    /* Ajusta el ancho del campo de búsqueda */
+    padding: 12px 15px;
+    /* Espaciado interno */
+    border: none;
+    /* Sin borde */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    background-color: #e8e8e8;
+    /* Fondo gris suave */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    transition: box-shadow 0.3s ease;
+    /* Transición suave para el efecto de foco */
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 10px #8b5a2b;
+    /* Sombra marrón al hacer foco */
+    outline: none;
+    /* Sin contorno al hacer foco */
+}
+
+/* --- Botón de Búsqueda --- */
+button.search-btn {
+    padding: 12px 20px;
+    /* Espaciado interno del botón */
+    background-color: #8b5a2b;
+    /* Color de fondo marrón rústico */
+    color: #ffffff;
+    /* Color del texto en blanco */
+    border: none;
+    /* Sin borde */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    margin-left: 10px;
+    /* Espacio a la izquierda */
+    transition: background-color 0.3s ease;
+    /* Transición suave para el color de fondo */
+}
+
+button.search-btn:hover {
+    background-color: #a0522d;
+    /* Cambia a marrón más claro al pasar el mouse */
+}
+
+/* --- Contenedor Principal de la Página --- */
+.container {
+    display: fixed;
+    /* Usar flexbox para alinear elementos */
+    justify-content: space-between;
+    /* Espacio entre los elementos */
+}
+
+/* --- Contenedor de Restaurantes --- */
+.restaurant-container {
+    margin-top: 100px;
+    /* Espacio superior para no ser cubierto por la barra de búsqueda */
+    padding: 20px;
+    /* Espaciado interno */
+    display: flex;
+    /* Usar flexbox para alinear elementos */
+    justify-content: center;
+    /* Centrar elementos horizontalmente */
+}
+
+.restaurant-container ul {
+    list-style: none;
+    /* Sin estilo de lista */
+    padding: 0;
+    /* Sin espaciado interno */
+    margin: 0;
+    /* Sin margen */
+    display: flex;
+    /* Usar flexbox para alinear elementos */
+    flex-wrap: wrap;
+    /* Permitir que los elementos se ajusten a múltiples líneas */
+    justify-content: center;
+    /* Centrar elementos horizontalmente */
+}
+
+li.restaurant {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fondo blanco suave */
+    border: 2px solid #8b5a2b;
+    /* Color marrón rústico para el borde */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra suave */
+    padding: 20px;
+    /* Espaciado interno */
+    margin: 15px;
+    /* Espaciado entre los elementos */
+    width: 200px;
+    /* Ancho fijo para los elementos de la lista */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transición suave para transformaciones */
+    text-align: center;
+    /* Centrar el texto */
+}
+
+li.restaurant:hover {
+    transform: scale(1.05);
+    /* Ligeramente más grande al pasar el mouse */
+    box-shadow: 0 0 25px #8b5a2b;
+    /* Sombra más intensa al pasar el mouse */
+}
+
+li.restaurant img.restaurant-image {
+    width: 100%;
+    /* Ancho del 100% del contenedor */
+    height: auto;
+    /* Altura automática para mantener la relación de aspecto */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    transition: transform 0.3s ease;
+    /* Transición suave para transformaciones */
+}
+
+li.restaurant img.restaurant-image:hover {
+    transform: scale(1.05);
+    /* Ligeramente más grande al pasar el mouse */
+}
+
+li.restaurant a {
+    text-decoration: none;
+    /* Sin subrayado en el enlace */
+    color: #8b5a2b;
+    /* Color marrón rústico */
+    font-weight: bold;
+    /* Texto en negrita */
+    display: block;
+    /* Mostrar como bloque */
+    margin-top: 10px;
+    /* Espacio superior */
+    transition: color 0.3s ease;
+    /* Transición suave para el color del texto */
+}
+
+li.restaurant a:hover {
+    color: #a0522d;
+    /* Cambia a marrón más claro al pasar el mouse */
+}
+
+/* --- Contenedor del Perfil --- */
+.profile-container {
+    flex: 0 0 20%;
+    /* Toma el 20% del espacio */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fondo blanco suave */
+    border: 2px solid #8b5a2b;
+    /* Color marrón rústico para el borde */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    padding: 20px;
+    /* Espaciado interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra suave */
+    margin-right: 20px;
+    /* Espacio a la derecha */
+}
+
+/* --- Foto de Perfil --- */
+.profile-photo {
+    text-align: center;
+    /* Centrar el contenido */
+    margin-bottom: 20px;
+    /* Espacio inferior */
+}
+
+.profile-photo img {
+    width: 100px;
+    /* Ancho de la imagen */
+    height: 100px;
+    /* Altura de la imagen */
+    border-radius: 50%;
+    /* Hacerla circular */
+    border: 3px solid #8b5a2b;
+    /* Bordes marrones */
+}
+
+/* --- Título del Perfil --- */
+.profile-container h2 {
+    color: #8b5a2b;
+    /* Color marrón rústico */
+    text-align: center;
+    /* Centrar el texto */
+}
+
+/* --- Contenedor de Comentarios del Perfil --- */
+.comments-container {
+    margin-top: 20px;
+    /* Espacio superior */
+}
+
+/* --- Iconos de Estrellas (Comentarios) --- */
+.star-image img {
+    width: 30px;
+    /* Ancho de las imágenes de estrellas */
+    margin: 5px;
+    /* Espacio alrededor */
+}
+
+/* --- Estilos para el Contenido Principal --- */
+.main-content {
+    flex: 0 0 80%;
+    /* Toma el 80% del espacio */
+    padding: 20px;
+    /* Espaciado interno */
+}
+
+/* --- Título Centrado en el Contenido Principal --- */
+.center-text {
+    text-align: center;
+    /* Centrar el texto */
+    color: #8b5a2b;
+    /* Color marrón rústico */
+}
+
+/* --- Campo de Comentarios --- */
+textarea {
+    width: 80%;
+    /* Ancho del campo de comentarios */
+    height: 150px;
+    /* Altura para comentarios largos */
+    padding: 12px;
+    /* Espaciado interno */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    border: 2px solid #8b5a2b;
+    /* Bordes marrones */
+    background-color: #f5f5f5;
+    /* Fondo blanco suave */
+    color: #333333;
+    /* Color del texto oscuro */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    float: right;
+    /* Alinear el textarea a la derecha */
+}
+
+/* --- Botón de Comentar --- */
+button.comment-btn {
+    padding: 12px 20px;
+    /* Espaciado interno del botón */
+    background-color: #8b5a2b;
+    /* Color de fondo marrón rústico */
+    color: #ffffff;
+    /* Color del texto en blanco */
+    border: none;
+    /* Sin borde */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease;
+    /* Transición suave para el color de fondo */
+}
+
+button.comment-btn:hover {
+    background-color: #a0522d;
+    /* Cambia a marrón más claro al pasar el mouse */
+}

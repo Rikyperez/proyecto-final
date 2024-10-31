@@ -1,0 +1,108 @@
+/* CSS para el restaurante de 5 estrellas con contraste mejorado */
+
+/* General styling for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1f2b; /* Fondo oscuro del tema anterior */
+    color: #f9f9f9; /* Texto claro para contraste */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #f0c674; /* Dorado claro con más brillo para destacar en fondo oscuro */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #2b2f3e; /* Fondo del formulario en tono oscuro acorde con el tema */
+    border: 1px solid #444; /* Borde sutil, pero con suficiente contraste */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más fuerte para resaltar */
+}
+
+/* Texto "Ingresar Código de Reservación" */
+label[for="codigo"] {
+    color: #f0c674; /* Un dorado claro que resalta sobre el fondo oscuro */
+    font-weight: bold;
+    font-size: 1.2em; /* Aumenta el tamaño para darle más importancia */
+}
+
+/* Campo de texto donde se ingresa el código de reservación */
+input[type="text"]#codigo {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    background-color: #444b5a; /* Fondo más claro para el input */
+    border: 1px solid #f0c674; /* Borde dorado que contrasta con el fondo */
+    border-radius: 4px;
+    color: #f9f9f9; /* Texto claro dentro del input */
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+/* Placeholder del input */
+input[type="text"]::placeholder {
+    color: #999; /* Placeholder gris para menor contraste */
+    font-style: italic;
+}
+
+/* Botón "Verificar Código" */
+button#verificar {
+    background-color: #f0c674; /* Dorado claro para el botón */
+    color: #1c1f2b; /* Texto oscuro para buen contraste */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#verificar:hover {
+    background-color: #e6b566; /* Dorado más oscuro en hover */
+}
+
+/* Otros labels */
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #c5c7d1; /* Color claro para texto */
+}
+
+/* Otros inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #3b3f52; /* Borde oscuro pero visible */
+    background-color: #3b3f52; /* Color de fondo acorde con el tema oscuro */
+    color: #f9f9f9; /* Texto claro dentro del input */
+    border-radius: 4px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+/* Botón general */
+button {
+    background-color: #f0c674; /* Dorado claro para los botones */
+    color: #1c1f2b; /* Texto oscuro */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e6b566; /* Dorado más oscuro en hover */
+}

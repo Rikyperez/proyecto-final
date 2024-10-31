@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #39FF14; /* Texto verde neón */
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1a1a1a; /* Fondo gris oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.4); /* Sombra neón verde */
+}
+
+.reservation-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1f1f1f; /* Fondo oscuro para la tabla */
+    border-radius: 8px;
+}
+
+.image-cell {
+    width: 30%;
+    padding: 15px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info-cell {
+    width: 70%;
+    padding: 15px;
+    vertical-align: top;
+}
+
+.intro-text {
+    margin: 15px 0;
+    color: #39FF14; /* Texto verde neón */
+}
+
+.reserve-button {
+    background-color: #008BFF; /* Azul neón */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reserve-button:hover {
+    background-color: #00FF7F; /* Verde neón brillante */
+    box-shadow: 0 0 10px #00FF7F, 0 0 20px #00FF7F, 0 0 30px #00FF7F;
+}
+
+.comment-section {
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+    color: #39FF14;
+}
+
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #121212;
+    color: #39FF14;
+    resize: none;
+}
+
+.back-section {
+    padding: 15px;
+    text-align: center;
+}
+
+.back-button {
+    background-color: #008BFF; /* Azul neón */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #00FF7F; /* Verde neón brillante */
+    box-shadow: 0 0 10px #00FF7F, 0 0 20px #00FF7F, 0 0 30px #00FF7F;
+}
+
+.star-image img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 5px;
+}
+
+.star-image img:hover {
+    transform: scale(1.5); /* Agranda las estrellas */
+    box-shadow: 0 0 20px #39FF14; /* Sombra neón verde */
+}
+.container {
+    background-color: #121212; /* Fondo oscuro */
+    color: #39FF14; /* Texto verde neón */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Sombra neón */
+}
+
+.back-button {
+    background-color: #39FF14; /* Fondo del botón */
+    color: black; /* Texto negro */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #32CD32; /* Color más oscuro en hover */
+}
+
+.comments-section {
+    background-color: #1E1E1E; /* Fondo de la sección de comentarios */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); /* Sombra suave */
+}
+
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #39FF14; /* Borde verde */
+    background-color: #282828; /* Fondo de textarea */
+    color: #fff; /* Texto blanco */
+}
+
+input[type="submit"] {
+    background-color: #39FF14; /* Fondo del botón de enviar */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #32CD32; /* Color más oscuro en hover */
+}
+
+button {
+    background-color: #FF4500; /* Color del botón de borrar */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF6347; /* Color más claro en hover */
+}

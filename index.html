@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Contenedor del perfil de usuario -->
+        <div class="profile-container">
+            <h2>Perfil de Usuario</h2>
+            <!-- Apartado para la foto de perfil -->
+            <div class="profile-photo">
+                <img src="default-profile.png" alt="Foto de perfil" id="userPhoto">
+            </div>
+            <div id="userProfile">
+                <?php include 'perfil.php'; ?>
+            </div>
+            
+            <!-- Sección de comentarios debajo del perfil -->
+            <div class="comments-container">
+                <h2>Calificación</h2>
+                <div class="star-image">
+                    <img src="estrella2.jfif" onclick="rate(1)" alt="1 estrella">
+                    <img src="estrella2.jfif" onclick="rate(2)" alt="2 estrellas">
+                    <img src="estrella2.jfif" onclick="rate(3)" alt="3 estrellas">
+                    <img src="estrella2.jfif" onclick="rate(4)" alt="4 estrellas">
+                    <img src="estrella2.jfif" onclick="rate(5)" alt="5 estrellas">
+                
+            
+
+                <form id="comentarioForm" onsubmit="return submitComment();">
+                    <input type="text" name="nombre_usuario" id="nombre_usuario" placeholder="Tu nombre" required>
+                    <textarea name="comentario" id="comentario" placeholder="Escribe tu comentario" required></textarea>
+                    <input type="submit" value="Comentar">
+                    <button type="button" onclick="clearComments()">Borrar Comentarios</button>
+                </form>
+                
+                <div id="commentsContainer"></div>
+            </div>
+        </div>
+</div>
+        <!-- Contenido principal de la página -->
+        <div class="main-content">
+            <h1 class="center-text">Búsqueda de Restaurantes</h1>
+            <div id="searchContainer">
+                <input type="text" id="searchInput" onkeyup="searchRestaurants()" placeholder="Buscar restaurante...">
+                
+            </div>
+            
+            <div id="noResults" style="display:none;">No se encontraron resultados.</div>
+
+            <div class="restaurant-container" id="restaurantContainer">
+                <ul>
+                    <li class="restaurant">
+                        <img src="El_Preferido_de_Palermo.jfif" alt="El Preferido de Palermo" class="restaurant-image">
+                        <a href="El_Preferido_de_Palermo.html">El Preferido de Palermo (Buenos Aires)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Tegui.jfif" alt="Tegui" class="restaurant-image">
+                        <a href="Tegui.html">Tegui (Buenos Aires)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="El_Pobre_Luis.jfif" alt="El Pobre Luis" class="restaurant-image">
+                        <a href="El_Pobre_Luis.html">El Pobre Luis (Buenos Aires)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Fogo_de_chao.jfif" alt="Fogo de Chão" class="restaurant-image">
+                        <a href="Fogo_de_chao.html">Fogo de Chão (São Paulo)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Oro.jfif" alt="Oro" class="restaurant-image">
+                        <a href="Oro.html">Oro (Río de Janeiro)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="D.O.M..jfif" alt="D.O.M." class="restaurant-image">
+                        <a href="D.O.M..html">D.O.M. (São Paulo)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Mani.jfif" alt="Maní" class="restaurant-image">
+                        <a href="Mani.html">Maní (São Paulo)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Joe_beef.jfif" alt="Joe Beef" class="restaurant-image">
+                        <a href="Joe_beef.html">Joe Beef (Montreal)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Alo_Restaurant.jfif" alt="Alo Restaurant" class="restaurant-image">
+                        <a href="Alo_Restaurant.html">Alo Restaurant (Toronto)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Langdon_Hall.jfif" alt="Langdon Hall" class="restaurant-image">
+                        <a href="Langdon_Hall.html">Langdon Hall (Cambridge)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Buca.jfif" alt="Buca" class="restaurant-image">
+                        <a href="Buca.html">Buca (Toronto)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Blue_Water_Cafe.jfif" alt="Blue Water Cafe" class="restaurant-image">
+                        <a href="Blue_Water_Cafe.html">Blue Water Cafe (Vancouver)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Borago.jfif" alt="Boragó" class="restaurant-image">
+                        <a href="Borago.html">Boragó (Santiago)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Castillo_Forestal.jfif" alt="Castillo Forestal" class="restaurant-image">
+                        <a href="Castillo_Forestal.html">Castillo Forestal (Santiago)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="La_Mar.jfif" alt="La Mar" class="restaurant-image">
+                        <a href="La_Mar.html">La Mar (Santiago)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Pergola_de_las_Flores.jfif" alt="Pérgola de las Flores" class="restaurant-image">
+                        <a href="Pergolas_de_las_Flores.html">Pérgola de las Flores (Santiago)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Aqui_esta_Coco.jfif" alt="Aquí está Coco" class="restaurant-image">
+                        <a href="Aqui_esta_Coco.html">Aquí está Coco (Santiago)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Carne_de_Res.jfif" alt="Andrés Carne de Res" class="restaurant-image">
+                        <a href="Carne_de_Res.html">Andrés Carne de Res (Chía)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Leo.jfif" alt="Leo" class="restaurant-image">
+                        <a href="Leo.html">Leo (Bogotá)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Harry_Sasson.jfif" alt="Harry Sasson" class="restaurant-image">
+                        <a href="Harry_Sasson.html">Harry Sasson (Bogotá)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="El_Cielo.jfif" alt="El Cielo" class="restaurant-image">
+                        <a href="El_Cielo.html">El Cielo (Medellín)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="La_Pergola.jfif" alt="La Pérgola" class="restaurant-image">
+                        <a href="La_Pergola.html">La Pérgola (Cartagena)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="La_Guarida.jfif" alt="La Guarida" class="restaurant-image">
+                        <a href="La_Guarida.html">La Guarida (La Habana)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Paladar_Los_Mercaderes.jfif" alt="Paladar Los Mercaderes" class="restaurant-image">
+                        <a href="Paladar_Los_Marcaderes.html">Paladar Los Mercaderes (La Habana)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="El_Cocinero.jfif" alt="El Cocinero" class="restaurant-image">
+                        <a href="El_Cocinero.html">El Cocinero (La Habana)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="San_Cristobal_Paladar.jfif" alt="San Cristóbal Paladar" class="restaurant-image">
+                        <a href="San_Cristobal_Paladar.html">San Cristóbal Paladar (La Habana)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="La_Casa.jfif" alt="La Casa" class="restaurant-image">
+                        <a href="La_Casa.html">La Casa (La Habana)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Abou_El_Sid.jfif" alt="Abou El Sid" class="restaurant-image">
+                        <a href="Abou_El_Sid.html">Abou El Sid (El Cairo)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Sequoia.jfif" alt="Sequoia" class="restaurant-image">
+                        <a href="Sequoia.html">Sequoia (El Cairo)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Felfela.jfif" alt="Felfela" class="restaurant-image">
+                        <a href="Felfela">Felfela (El Cairo)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Zooba.jfif" alt="Zooba" class="restaurant-image">
+                        <a href="Zooba.html">Zooba (El Cairo)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Fishawi's_Cafe.jfif" alt="Fishawi's Café" class="restaurant-image">
+                        <a href="Fishawi's_Cafe.html">Fishawi's Café (El Cairo)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="La_Pampa.jfif" alt="La Pampa" class="restaurant-image">
+                        <a href="La_Pampa.html">La Pampa (San Salvador)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="El_Zocalo.jfif" alt="El Zocalo" class="restaurant-image">
+                        <a href="El_Zocalo.html">El Zocalo (San Salvador)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="EL_bodegon.jfif" alt="El Bodegón" class="restaurant-image">
+                        <a href="El_bodegon.html">El Bodegón (San Salvador)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Restaurante_Salvadoreño.jfif" alt="Restaurante Salvadoreño" class="restaurant-image">
+                        <a href="Restaurante_Salvadoreño.html">Restaurante Salvadoreño (San Salvador)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="La_Hola.jfif" alt="La Hola" class="restaurant-image">
+                        <a href="La_Hola.html">La Hola (San Salvador)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="El_Bulli.jfif" alt="El Bulli" class="restaurant-image">
+                        <a href="El_Bulli.html">El Bulli (Cataluña, ahora cerrado)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Arzak.jfif" alt="Arzak" class="restaurant-image">
+                        <a href="Arzak.html">Arzak (San Sebastián)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Tickets.jfif" alt="Tickets" class="restaurant-image">
+                        <a href="Tickets.html">Tickets (Barcelona)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="DiverXO.jfif" alt="DiverXO" class="restaurant-image">
+                        <a href="DiverXO.html">DiverXO (Madrid)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Calima.jfif" alt="Calima" class="restaurant-image">
+                        <a href="Calima.html">Calima (Marbella)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Eleven_Madison_Park.jfif" alt="Eleven Madison Park" class="restaurant-image">
+                        <a href="Eleven_Madison_Park.html">Eleven Madison Park (Nueva York)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="The_French_Laundry.jfif" alt="The French Laundry" class="restaurant-image">
+                        <a href="The_French_Laundry.html">The French Laundry (Yountville, California)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Alinea.jfif" alt="Alinea" class="restaurant-image">
+                        <a href="Alinea.html">Alinea (Chicago)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Per_Se.jfif" alt="Per Se" class="restaurant-image">
+                        <a href="Per_Se.html">Per Se (Nueva York)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Le_Bernadin.jfif" alt="Le Bernardin" class="restaurant-image">
+                        <a href="Bernardin.html">Le Bernardin (Nueva York)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Le_Meurice.jfif" alt="Le Meurice" class="restaurant-image">
+                        <a href="Le_Meurice.html">Le Meurice (París)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="L'Arpege.jfif" alt="L'Arpège" class="restaurant-image">
+                        <a href="L'Arpege.html">L'Arpège (París)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Guy_Savoy.jfif" alt="Guy Savoy" class="restaurant-image">
+                        <a href="Guy_Savoy.html">Guy Savoy (París)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="La_Tour_D'Argent.jfif" alt="La Tour d'Argent" class="restaurant-image">
+                        <a href="La_Tour_D'Argent.html">La Tour d'Argent (París)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Pierre_Gagnaire.jfif" alt="Pierre Gagnaire" class="restaurant-image">
+                        <a href="Pierre_Gagnaire.html">Pierre Gagnaire (París)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Noma.jfif" alt="Noma" class="restaurant-image">
+                        <a href="Noma.html">Noma (Copenhague)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="The_Fat_Duck.jfif" alt="The Fat Duck" class="restaurant-image">
+                        <a href="The_Fat_Duck.html">The Fat Duck (Berkshire)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="The_Ledbury.jfif" alt="The Ledbury" class="restaurant-image">
+                        <a href="The_Ledbury.html">The Ledbury (Londres)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="Dinner_by_Heston_Blumenthal.jfif" alt="Dinner by Heston Blumenthal" class="restaurant-image">
+                        <a href="Dinner_by_Heston_Blumenthal.html">Dinner by Heston Blumenthal (Londres)</a>
+                    </li>
+                    <li class="restaurant">
+                        <img src="The_Waterside_Inn.jfif" alt="The Waterside Inn" class="restaurant-image">
+                        <a href="The_Waterside_Inn.html">The Waterside Inn (Berkshire)</a>
+                    </li>
+                    <li class="restaurant">
+                       <img src="The_Clove_Club.jfif" alt="The Clove Club" class="restaurant-image">
+                       <a href="The_Clove_Club.html">The Clove Club (Londres)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_1.js"></script>
+
+</body>
+</html> )

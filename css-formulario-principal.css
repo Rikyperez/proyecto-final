@@ -1,0 +1,159 @@
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente general */
+    background-color: #1c1f2b; /* Color de fondo oscuro */
+    color: #fff; /* Texto en blanco */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el padding predeterminado */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    min-height: 100vh; /* Asegura que el contenido esté centrado verticalmente en toda la pantalla */
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+
+/* Contenedor que ajusta todo el contenido */
+.container {
+    background-color: #2b2f3e; /* Fondo del contenedor */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    width: 100%; /* Ocupa todo el ancho posible */
+    max-width: 400px; /* Ancho máximo de 400px */
+    text-align: center; /* Centrar el texto */
+    margin: 20px auto; /* Centrar el contenedor horizontalmente y espaciado superior */
+}
+
+/* Encabezados */
+h1 {
+    font-size: 26px; /* Tamaño de la fuente para el título */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+    color: #fff; /* Color blanco para el título */
+}
+
+/* Etiquetas */
+label {
+    font-size: 14px; /* Tamaño de fuente para las etiquetas */
+    margin-bottom: 5px; /* Espaciado debajo de las etiquetas */
+    display: block; /* Hace que las etiquetas ocupen todo el ancho */
+    color: #c5c7d1; /* Color gris claro para el texto de las etiquetas */
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    width: calc(100% - 20px); /* Asegura que el input no toque los bordes del contenedor */
+    padding: 12px; /* Espaciado interno del input */
+    margin: 10px auto; /* Margen superior e inferior de 10px, auto para centrar horizontalmente */
+    background-color: #3b3f52; /* Fondo oscuro para el input */
+    border: none; /* Sin bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    color: #fff; /* Color blanco para el texto */
+    font-size: 16px; /* Tamaño de la fuente del texto */
+    transition: box-shadow 0.3s ease, transform 0.2s ease; /* Transición suave para efectos */
+}
+
+/* Efecto al hacer foco en el campo */
+input:focus {
+    outline: none; /* Elimina el borde azul predeterminado */
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5); /* Sombra azul alrededor del input */
+    transform: scale(1.02); /* Agranda ligeramente el input */
+}
+
+/* Contenedor para botones en fila */
+.buttons-row {
+    display: flex; /* Flexbox para los botones */
+    justify-content: space-between; /* Espacio entre los botones */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Botones con animación de hover */
+button, .button-link {
+    padding: 12px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Elimina subrayado en enlaces */
+    text-align: center; /* Centra el texto */
+    width: 31%; /* Los botones ocupan el 31% del contenedor padre */
+    margin-right: 5px; /* Margen derecho entre los botones */
+    display: flex; /* Flexbox dentro del botón */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto de transición suave */
+}
+
+/* Efecto al pasar sobre el botón */
+button:hover, .button-link:hover {
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+/* El último botón no tiene margen derecho */
+button:last-child, .button-link:last-child {
+    margin-right: 0;
+}
+
+/* Estilos específicos de botones */
+/* Botón Reservar */
+button[type="submit"][name="accion"][value="reservar"] {
+    background-color: #007bff; /* Azul predeterminado */
+}
+
+/* Efecto hover en el botón Reservar */
+button[type="submit"][name="accion"][value="reservar"]:hover {
+    background-color: #0056b3; /* Azul más oscuro al hacer hover */
+}
+
+/* Botón Actualizar */
+.button-link.actualizar {
+    background-color: #17a2b8; /* Color cian */
+}
+
+/* Efecto hover en el botón Actualizar */
+.button-link.actualizar:hover {
+    background-color: #117a8b; /* Color cian más oscuro */
+}
+
+/* Botón Eliminar */
+.button-link.eliminar {
+    background-color: #dc3545; /* Color rojo */
+}
+
+/* Efecto hover en el botón Eliminar */
+.button-link.eliminar:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+}
+
+/* Botón para Consultar Mesas Disponibles */
+.button-full {
+    margin-top: 15px; /* Espaciado superior */
+    width: 90%; /* Ocupa todo el ancho disponible */
+}
+
+/* Botón Consultar Mesas */
+.button-full .consultar {
+    background-color: #28a745; /* Color verde */
+    display: flex; /* El botón ocupa todo el ancho */
+    width: 100%; /* Ancho completo */
+    padding: 12px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Efecto hover en el botón Consultar Mesas */
+.button-full .consultar:hover {
+    background-color: #218838; /* Verde más oscuro al hacer hover */
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+/* Asegurar el centrado perfecto del formulario */
+form {
+    display: flex; /* Flexbox para el formulario */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos dentro del formulario */
+}

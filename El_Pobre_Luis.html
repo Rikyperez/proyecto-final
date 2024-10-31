@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Preferido de Palermo</title>
+    <link rel="stylesheet" href="Css_de_restaurantes.css">
+</head>
+<body>
+    <!-- Sección principal -->
+    <div class="container">
+        <h1>El Preferido de Palermo</h1>
+
+        <table class="reservation-table">
+            <tr>
+                <td class="image-cell">
+                    <img src="El_Preferido_de_Palermo.jfif" alt="El Preferido de Palermo" class="image">
+                </td>
+                <td class="info-cell">
+                    <h2>Descripción</h2>
+                    <p class="intro-text">
+                        Este es un restaurante emblemático de Buenos Aires que ofrece comida tradicional argentina.
+                    </p>
+
+                    <!-- Calificación y comentarios -->
+                    <div class="container">
+                        <h2>Enviar Comentario</h2>
+                        <form id="comentarioForm" onsubmit="submitComment(event, 'comentariosLuis')">
+                            <input type="text" name="nombre_usuario" id="nombre_usuario" placeholder="Tu nombre" required>
+                            <textarea name="comentario" id="comentario" placeholder="Escribe tu comentario" required></textarea>
+                            <input type="submit" value="Comentar">
+                            <button type="button" onclick="clearComments('comentariosLuis')">Borrar Comentarios</button>
+                        </form>
+
+                        <!-- Contenedor donde se mostrarán los comentarios -->
+                        <div id="commentsContainer"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Script de lógica -->
+    <script src="script.js"></script>
+
+    <script>
+        // Mostrar los comentarios almacenados al cargar la página
+        document.addEventListener("DOMContentLoaded", function() {
+            displayComments('comentariosLuis');
+        });
+    </script>
+</body>
+</html>
+

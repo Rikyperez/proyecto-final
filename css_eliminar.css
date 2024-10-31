@@ -1,0 +1,62 @@
+/* CSS para el restaurante de 5 estrellas */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #b59c5a; /* Color dorado */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px; /* Menor padding para reducir el tamaño */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+input[type="text"]::placeholder {
+    color: #999; /* Color del texto del placeholder */
+    font-style: italic; /* Estilo en cursiva */
+}
+
+button {
+    background-color: #b59c5a; /* Color dorado */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #9f7b44; /* Color dorado más oscuro */
+}

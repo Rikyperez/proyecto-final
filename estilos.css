@@ -1,0 +1,73 @@
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1f2b; /* Fondo oscuro */
+    color: #f9f9f9; /* Texto claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Coloca el título arriba del formulario */
+    height: 100vh; /* Centrar verticalmente */
+}
+
+/* Título principal */
+h1 {
+    color: #f0c674; /* Dorado claro */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulario */
+form {
+    max-width: 500px;
+    width: 100%;
+    background-color: #2b2f3e; /* Fondo del formulario oscuro */
+    border: 1px solid #444; /* Borde oscuro */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea los elementos del formulario al centro */
+}
+
+/* Estilo para los labels */
+label {
+    font-weight: bold;
+    color: #f9f9f9; /* Texto claro */
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Estilo para los campos de entrada */
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #444b5a; /* Fondo más claro para los inputs */
+    border: 1px solid #f0c674; /* Borde dorado que contrasta con el fondo */
+    border-radius: 4px;
+    color: #f9f9f9; /* Texto claro dentro del input */
+}
+
+/* Botón "Guardar Cambios" */
+button {
+    background-color: #f0c674; /* Dorado claro para el botón */
+    color: #1c1f2b; /* Texto oscuro para buen contraste */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e6b566; /* Dorado más oscuro en hover */
+}
