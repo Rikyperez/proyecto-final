@@ -1,0 +1,139 @@
+/* Reset de márgenes y rellenos predeterminados en todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total */
+}
+
+/* Estilo general para el cuerpo de la página */
+body {
+    background: linear-gradient(135deg, #dcdcdc, #8b5a2b); /* Degradado de gris claro a marrón */
+    font-family: 'Poppins', sans-serif; /* Estilo de fuente */
+    color: #000000; /* Texto de color negro */
+    padding: 20px; /* Relleno alrededor del contenido principal */
+}
+
+/* Estilos para la imagen del restaurante */
+.image {
+    width: 100%; /* Ajusta el tamaño al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 800px; /* Establece un ancho máximo para la imagen */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: white; /* Fondo blanco */
+    padding: 20px; /* Espacio dentro del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(139, 90, 43, 0.4); /* Sombra alrededor del contenedor con color marrón (anteriormente verde) */
+}
+
+/* Sección de calificación (rating) */
+.rating {
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+/* Imágenes de estrellas para calificación */
+.star-image img {
+    width: 40px; /* Ancho de la estrella */
+    height: 40px; /* Alto de la estrella */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave en tamaño y sombra */
+    margin: 0 5px; /* Espacio entre las estrellas */
+}
+
+/* Texto introductorio */
+.intro-text {
+    margin: 15px 0; /* Margen superior e inferior */
+    color: #000000; /* Color negro para el texto introductorio */
+}
+
+/* Botones principales */
+.reserve-button, .back-button {
+    background-color: #008BFF; /* Color azul de los botones */
+    color: white; /* Color blanco del texto en los botones */
+    padding: 10px 20px; /* Relleno dentro de los botones */
+    border: none; /* Sin borde alrededor del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Efecto suave de transición */
+}
+
+/* Efecto de hover en botones */
+.reserve-button:hover, .back-button:hover {
+    background-color: #8b5a2b; /* Cambia a color marrón al pasar el cursor por encima */
+    box-shadow: 0 0 10px #8b5a2b, 0 0 20px #8b5a2b, 0 0 30px #8b5a2b; /* Sombra marrón al hacer hover */
+}
+
+/* Sección de comentarios */
+.comment-section {
+    padding: 15px; /* Relleno interno de la sección */
+    background-color: white; /* Fondo blanco */
+    border-top: 1px solid #dcdcdc; /* Borde superior gris */
+    color: #000000; /* Texto de color negro */
+}
+
+/* Área de texto en la sección de comentarios */
+.comment-section textarea {
+    width: 100%; /* Ancho completo del textarea */
+    padding: 10px; /* Relleno interno */
+    border: 1px solid #8b5a2b; /* Borde color marrón */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: white; /* Fondo blanco */
+    color: #000000; /* Texto de color negro */
+    resize: none; /* Evita que el textarea se pueda redimensionar */
+}
+
+/* Sección de múltiples comentarios */
+.comments-section {
+    background-color: white; /* Fondo blanco */
+    padding: 15px; /* Relleno interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 15px; /* Separación superior */
+    box-shadow: 0 0 10px rgba(139, 90, 43, 0.3); /* Sombra marrón claro (anteriormente verde) */
+}
+
+/* Estilos generales para los textareas */
+textarea {
+    width: 100%; /* Ancho completo del textarea */
+    padding: 10px; /* Relleno interno */
+    margin-top: 10px; /* Margen superior para separar del contenido anterior */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #8b5a2b; /* Borde marrón */
+    background-color: white; /* Fondo blanco */
+    color: #000000; /* Texto de color negro */
+}
+
+/* Botón de envío en formularios */
+input[type="submit"] {
+    background-color: #8b5a2b; /* Fondo marrón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Relleno interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Hover en botón de envío */
+input[type="submit"]:hover {
+    background-color: #6b4226; /* Cambia a un marrón más oscuro al pasar el cursor */
+}
+
+/* Botones secundarios */
+button {
+    background-color: #ce8e03; /* Fondo naranja */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Relleno interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+/* Hover en los botones secundarios */
+button:hover {
+    background-color: #b87a02; /* Cambia a un naranja más oscuro al pasar el cursor */
+}

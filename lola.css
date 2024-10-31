@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('restaurante-fondo.jpg'); /* Cambia la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #B8860B; /* Dorado */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 45%;
+    margin: 10px;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 2px solid #B8860B; /* Dorado */
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #fff;
+}
+
+th {
+    background-color: #B8860B; /* Dorado */
+    color: #fff;
+}
+
+.tables-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+button, a.button-link {
+    background-color: #B8860B; /* Dorado */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+button:hover, a.button-link:hover {
+    background-color: #DAA520; /* Dorado más claro */
+}

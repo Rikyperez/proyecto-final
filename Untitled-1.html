@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Contenido con Hipervínculo</title>
+    <style>
+        /* Estilos para la página */
+        #contenido {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi página</h1>
+    <p>
+        <a href="#" onclick="cambiarContenido('Contenido sobre HTML')">HTML</a> |
+        <a href="#" onclick="cambiarContenido('Contenido sobre CSS')">CSS</a> |
+        <a href="#" onclick="cambiarContenido('Contenido sobre JavaScript')">JavaScript</a>
+    </p>
+
+    <div id="contenido">
+        <p>Selecciona un tema para ver el contenido aquí.</p>
+    </div>
+
+    <script>
+        function cambiarContenido(texto) {
+            document.getElementById('contenido').innerHTML = '<p>' + texto + '</p>';
+        }
+    </script>
+</body>
+</html>
